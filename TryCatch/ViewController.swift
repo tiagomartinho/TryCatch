@@ -13,6 +13,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        TryCatch.try { () -> Void in
+            var expn = NSExpression(format:"1*+2")
+        };
     }
 
     override func didReceiveMemoryWarning() {

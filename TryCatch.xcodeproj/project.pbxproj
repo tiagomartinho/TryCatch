@@ -13,6 +13,7 @@
 		EA6A38851B04941D003FB082 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA6A38841B04941D003FB082 /* Images.xcassets */; };
 		EA6A38881B04941D003FB082 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA6A38861B04941D003FB082 /* LaunchScreen.xib */; };
 		EA6A38941B04941D003FB082 /* TryCatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6A38931B04941D003FB082 /* TryCatchTests.swift */; };
+		EA6A38A11B04945B003FB082 /* TryCatch.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6A389F1B04945B003FB082 /* TryCatch.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,9 @@
 		EA6A388D1B04941D003FB082 /* TryCatchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TryCatchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA6A38921B04941D003FB082 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA6A38931B04941D003FB082 /* TryCatchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TryCatchTests.swift; sourceTree = "<group>"; };
+		EA6A389D1B04945A003FB082 /* TryCatch-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TryCatch-Bridging-Header.h"; sourceTree = "<group>"; };
+		EA6A389E1B04945B003FB082 /* TryCatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TryCatch.h; sourceTree = "<group>"; };
+		EA6A389F1B04945B003FB082 /* TryCatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TryCatch.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,11 +81,8 @@
 		EA6A387A1B04941D003FB082 /* TryCatch */ = {
 			isa = PBXGroup;
 			children = (
-				EA6A387D1B04941D003FB082 /* AppDelegate.swift */,
 				EA6A387F1B04941D003FB082 /* ViewController.swift */,
-				EA6A38811B04941D003FB082 /* Main.storyboard */,
-				EA6A38841B04941D003FB082 /* Images.xcassets */,
-				EA6A38861B04941D003FB082 /* LaunchScreen.xib */,
+				EA6A38A21B04951F003FB082 /* Objective-C */,
 				EA6A387B1B04941D003FB082 /* Supporting Files */,
 			);
 			path = TryCatch;
@@ -90,6 +91,10 @@
 		EA6A387B1B04941D003FB082 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EA6A387D1B04941D003FB082 /* AppDelegate.swift */,
+				EA6A38811B04941D003FB082 /* Main.storyboard */,
+				EA6A38841B04941D003FB082 /* Images.xcassets */,
+				EA6A38861B04941D003FB082 /* LaunchScreen.xib */,
 				EA6A387C1B04941D003FB082 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -110,6 +115,16 @@
 				EA6A38921B04941D003FB082 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EA6A38A21B04951F003FB082 /* Objective-C */ = {
+			isa = PBXGroup;
+			children = (
+				EA6A389E1B04945B003FB082 /* TryCatch.h */,
+				EA6A389F1B04945B003FB082 /* TryCatch.m */,
+				EA6A389D1B04945A003FB082 /* TryCatch-Bridging-Header.h */,
+			);
+			name = "Objective-C";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,6 +229,7 @@
 			files = (
 				EA6A38801B04941D003FB082 /* ViewController.swift in Sources */,
 				EA6A387E1B04941D003FB082 /* AppDelegate.swift in Sources */,
+				EA6A38A11B04945B003FB082 /* TryCatch.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,9 +358,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = TryCatch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TryCatch/TryCatch-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -352,9 +371,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = TryCatch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TryCatch/TryCatch-Bridging-Header.h";
 			};
 			name = Release;
 		};
